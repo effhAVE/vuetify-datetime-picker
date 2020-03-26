@@ -20,7 +20,7 @@
 
     <v-card>
       <v-card-text class="px-0 py-0">
-        <v-tabs fixed-tabs v-model="activeTab">
+        <v-tabs v-bind="tabsProps" fixed-tabs v-model="activeTab">
           <v-tab key="calendar">
             <slot name="dateIcon">
               <v-icon>event</v-icon>
@@ -115,6 +115,9 @@ export default {
       type: Object
     },
     timePickerProps: {
+      type: Object
+    },
+    tabsProps: {
       type: Object
     }
   },
